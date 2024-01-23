@@ -1,0 +1,52 @@
+.productive {
+    margin-top: rem(130);
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: rem(58);
+        max-width: 1260px;
+        margin: 0 auto;
+
+        @include breakpoint(large) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    img {
+        width: 100%;
+        max-width: rem(627);
+
+    }
+
+    h1 {
+        font-size: rem(36);
+        line-height: 1.4;
+        margin-bottom: rem(30);
+    }
+
+    p {
+        font-size: rem(16);
+        margin-bottom: rem(26);
+        line-height: 1.5;
+    }
+
+    a {
+        background: url('../images/icon-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding-right: rem(25);
+        color: rgb(100, 225, 217);
+        padding-bottom: rem(5);
+        border-bottom: 1px solid rgb(100, 225, 217);
+        transition: 500ms ease-in-out;
+
+        &:hover {
+            text-decoration: none;
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+}

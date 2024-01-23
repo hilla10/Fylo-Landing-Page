@@ -1,0 +1,89 @@
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+    background-color: $dark-blue;
+
+    .container {
+        img {
+            width: 100%;
+            max-width: rem(710);
+        }
+    }
+
+    h1 {
+        width: 100%;
+        margin: rem(42) auto;
+        font-size: rem(36);
+        line-height: 1.4;
+
+        @include breakpoint(large) {
+            max-width: rem(678);
+        }
+    }
+
+    p {
+        width: 100%;
+        margin: rem(0) auto;
+        font-size: rem(22);
+        line-height: 1.5;
+        margin-bottom: rem(34);
+
+        @include breakpoint(large) {
+            max-width: rem(678);
+        }
+    }
+
+    button {
+        cursor: pointer;
+        display: inline-block;
+        width: 100%;
+        max-width: rem(322);
+        padding: rem(22) rem(30);
+        border-radius: rem(35);
+        border: none;
+        outline: none;
+        text-align: center;
+        margin-bottom: rem(162);
+        background: linear-gradient(to right, $cyan, $blue);
+        color: #fff;
+        font-size: rem(18);
+        font-weight: 700;
+        
+        &:hover {
+            background: $cyan;
+        }
+    }
+
+
+
+    .bg-img {
+        position: absolute;
+        bottom: 0;
+        background: url('../images/bg-curvy-mobile.svg');
+        width: 100%;
+        height: 40vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        object-fit: cover;
+        z-index: -1;
+
+
+        @include breakpoint(medium) {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: -1;
+            height: rem(438);
+            background: url('../images/bg-curvy-desktop.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    }
+
+}

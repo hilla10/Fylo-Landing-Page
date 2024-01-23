@@ -1,0 +1,58 @@
+.header {
+    font-family: $header-font;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: $dark-blue;
+    padding: rem(30) rem(15) rem(50) rem(38);
+
+    @include breakpoint(medium) {
+        padding: rem(47) rem(40) rem(90);
+
+    }
+
+    @include breakpoint(large) {
+        padding: rem(73) rem(60) rem(87);
+    }
+
+    ul {
+        display: flex;
+        margin-left: rem(30);
+
+        li {
+            padding: 0 rem(15);
+
+            @include breakpoint(large) {
+                font-size: rem(28);
+            }
+
+            a {
+                display: block;
+                font-size: rem(14);
+                color: hsl(0, 0%, 70%);
+
+                @include breakpoint(large) {
+                    font-size: rem(16);
+                }
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+
+    }
+
+
+
+    img {
+        width: rem(85);
+
+        @include breakpoint(large) {
+            width: rem(180);
+        }
+    }
+
+}

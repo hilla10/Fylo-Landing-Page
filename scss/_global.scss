@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $body-font;
+    background: $dark-blue-mg;
+    color: #fff;
+    line-height: 1.2;
+    font-size: rem(14);
+}
+
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $header-font;
+}
+
+p {
+    color: #9ea2ad;
+    line-height: 1.5;
+}
+
+span {
+    color: #9ea2ad;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 0 rem(25);
+
+    @include breakpoint(medium) {
+        padding: 0 rem(68);
+    }
+
+    @include breakpoint(large) {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,130 @@
+.footer {
+    background: $dark-blue-fg;
+    padding-top: rem(220);
+    padding-bottom: rem(90);
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+
+        @include breakpoint(large) {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+
+        }
+    }
+
+    a {
+        display: inline-block;
+        color: #9ea2ad;
+        transition: 0.3s;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    .social__links {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+
+        @include breakpoint(large) {
+            grid-template-columns: 30% 1fr 1fr 1fr;
+        }
+    }
+
+
+
+    .grid-item {
+        margin-top: rem(54);
+        margin-right: rem(20);
+
+        &:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+
+        }
+
+        img {
+            margin-right: rem(25);
+            margin-top: rem(5);
+        }
+
+        &:last-child {
+            margin: 0 auto;
+
+            @include breakpoint(large) {
+                margin-top: rem(54);
+            }
+        }
+
+        &:nth-child(2) {
+            a {
+                padding-bottom: rem(15);
+            }
+        }
+
+        &:nth-child(3) {
+
+            ul {
+                margin-top: rem(30);
+            }
+
+            @include breakpoint(large) {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: rem(25);
+
+                ul {
+                    margin-top: 0;
+                }
+            }
+
+            li {
+                padding-bottom: rem(18);
+
+                a {
+                    font-size: rem(17);
+                }
+            }
+        }
+    }
+
+
+    a {
+        svg {
+            width: rem(35);
+            height: rem(35);
+            display: inline-block;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin: rem(10);
+            fill: #fff;
+            padding: rem(8);
+            transition: 300ms ease-in-out;
+
+            &:hover {
+                fill: $blue;
+                border-color: $blue;
+            }
+        }
+
+
+    }
+
+    p {
+        text-align: center;
+        padding-top: rem(20);
+        a {
+            color: $blue;
+        }
+    }
+}
